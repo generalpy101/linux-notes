@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Umask</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Umask</h1><br/><p>When we create a new file or directory there are some default permissions set automatically.</p><p></p><p><img src="images/44-1.png" alt="images/44-1.png" /></p><p></p><p>We can see that by default, new file and directory we created has permissions 0664 and 0775 respectively. Where these permissions came from??</p><p></p><p>Answer is from umask.</p><p></p><p>Let&#39;s calculate permissions from umask.</p><p></p><p>In linux, we assume that default file permissions are 0666 for files and 0777 for dirs. Now, subtract umask from these permissions. To get umask, just write umask command.</p><p><img src="images/44-2.png" alt="images/44-2.png" /></p><p></p><p>Here umask is 0002. Therefore our default permissions are 0664 and 0775 for files and dirs respectively.</p><p></p><p>default permission = 0666/0777 - umask.</p><p></p><p>We can change current session umask value by running umask and then writing value after it.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">umask</span> perms_mask</pre></div></p><p></p><p><img src="images/44-3.png" alt="images/44-3.png" /></p><p></p><p>Note that umask values are valid only for that session.</p><p></p><p>To set permanent umask values, edit the .bashrc file.</p></div>
+</body>
+</html>

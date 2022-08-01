@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Copying files over network</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Copying files over network</h1><br/><p>scp(secure copy) is a utility which uses ssh to copy files from remote server to local system, vice versa and from remote server to another remote server.</p><p></p><p>The users running and receiving files using scp must have valid permissions in their respective systems.</p><p></p><p>scp uses port 22 by default to perform copying.</p><p></p><p>Simple scp copy looks like(local to remote server) :</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">scp</span> local_file_path user@host_address<span style="color:#ff9d00;font-weight:700">:</span>path_in_host_system</pre></div></p><p></p><p><img src="images/67-1.png" alt="images/67-1.png" /></p><p><img src="images/67-2.png" alt="images/67-2.png" /></p><p></p><p>Above command copies file ip.txt from ubuntu to metasploitable which is located at 10.0.2.20(at the time of running).</p><p></p><p>To use another port than 22 we can use -P flag followed by a port number.</p><p></p><p>To copy a directory, we must use -r flag with the scp command.</p><p></p><p><img src="images/67-3.png" alt="images/67-3.png" /></p><p><img src="images/67-4.png" alt="images/67-4.png" /></p><p></p><p>To preserve atime and mtime use -p flag.</p><p></p><p>Like simple copy, we can copy files remotely with a changed name too.</p><p></p><p>To copy files from remote server to local system, we just have to use a path available in remote server.</p><p></p><p><img src="images/67-5.png" alt="images/67-5.png" /></p><p><img src="images/67-6.png" alt="images/67-6.png" /></p><p></p><p>To copy files from server to server, we have to know users in both the systems.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">scp</span> user1@host1_address user2@host2_address </pre></div></p><p></p><p>There is another protocol available known as SFTP(SSH File Transfer Protocol) which also uses ssh but its has more functionalities like remote directory removal, directory listing etc. but in long run scp is faster than SFTP. </p><p></p><p>We can also transfer files between windows and linux by using GUI clients like Filezilla.</p></div>
+</body>
+</html>

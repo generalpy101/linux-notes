@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Overview</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Overview</h1><br/><p>Bash follows 5 step process execute a command given to it :</p><p></p><p>1. <strong><span style="text-decoration:underline;">Tokenisation</span></strong> : Tokenisation is the process dividing command into tokens. Token is a sequence of characters which is smallest single unit of the command. Tokens are divided according to metacharacters.</p><p><img src="images/111-1.png" alt="images/111-1.png" /></p><p>There are 2 types of tokens in bash :</p><p>&lt;i&gt;. <strong>Words</strong> : A word is  a token that doesn&#39;t contain any unquoted metacharacter.</p><p>&lt;ii&gt;. <strong>Operator</strong> : An operators is a token that contain atlease 1 unquoted metacharacter.</p><p></p><p>2. <strong><span style="text-decoration:underline;">Command identification</span></strong> : After tokenisation, command identification is done and command is divided into 2 categories :</p><p>&lt;i&gt;. <strong>Simple commands</strong> are the commands which are just a bunch of individual words and are terminated by control operators. We&#39;ve been using simple commands till now which are command names followed by its arguments.</p><p>&lt;ii&gt;. <strong>Complex commands</strong> gives bash its programming constructs like if,else , while loop etc.</p><p></p><p>3. <strong><span style="text-decoration:underline;">Expansions</span></strong> : If any type of expansions are present, commands are expanded into it.</p><p></p><p>4. <strong><span style="text-decoration:underline;">Quote removal</span></strong> : Quotes can be used to control the flow of commands. In this step quotes are removed and its components are evaluated accordingly.</p><p></p><p>5. <strong><span style="text-decoration:underline;">Redirection</span></strong> : More on this later. </p></div>
+</body>
+</html>

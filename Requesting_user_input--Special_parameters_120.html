@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Special parameters</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Special parameters</h1><br/><p>Special parameters are the unmodifiable parameters that bash defines for us to use.</p><p></p><p>Special parameters take values according to the script or context they are being used.</p><p></p><p>First special parameter we talk about is #.</p><p></p><p># takes the value of number of parameters passed to the script.</p><p></p><p><img src="images/120-1.png" alt="images/120-1.png" /></p><p></p><p>Second one is 0. This parameter stores the name of shell if ran in a shell and name of script if ran inside a script.</p><p></p><p><img src="images/120-2.png" alt="images/120-2.png" /></p><p></p><p>Third @. $@ provides list of all positional parameters at once but output changes according to quoting.</p><p></p><p>When used without quotes, $@ returns space separated values which can be further word splitted.</p><p><img src="images/120-3.png" alt="images/120-3.png" /></p><p></p><p>When used with quotes, it returns space separated quoted values which cannot be further subjected to word splitting.</p><p><img src="images/120-4.png" alt="images/120-4.png" /></p><p></p><p><img src="images/120-5.png" alt="images/120-5.png" /></p><p>Notice how quoted values were further splitted when unquoted $@ was used.</p><p></p><p>4th special parameter is *.</p><p></p><p>Unquoted $* acts same as unquoted $@ but quoted one returns parameters sepearated by , which can be used splitted if IFS contains ,.</p><p><img src="images/120-6.png" alt="images/120-6.png" /></p></div>
+</body>
+</html>

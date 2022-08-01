@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Creating files and directories</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Creating files and directories</h1><br/><p>Files in linux can be created using touch command which will create an empty file.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">touch</span> &lt;filename&gt;</pre></div></p><p></p><p><img src="images/18-1.png" alt="images/18-1.png" /></p><p></p><p>If file already exists, touch command updates timestamps to latest timestamps.</p><p></p><p>Since linux is case insensitive we can create multiple files with same name but with different letter cases. To create files which contain spaces(which is not recommended), enclose filename in “ ”.</p><p></p><p><strong>mkdir</strong> command is used to create directories. It takes directory name as argument.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">mkdir</span> directory<span style="color:#ff9d00;font-weight:700">(</span>ies<span style="color:#ff9d00;font-weight:700">)</span>_name</pre></div></p><p></p><p><img src="images/18-2.png" alt="images/18-2.png" /></p><p></p><p>To see what mkdir is doing use -v flag which stands for verbose.</p><p></p><p><img src="images/18-3.png" alt="images/18-3.png" /> </p><p></p><p>We can create multiple directories at once by specifying all of their names.</p><p></p><p>To create nested directories, parent directories must exist. Eg you write <em>mkdir sd/ds</em> then sd must exist exist so that ds can be created inside it.</p><p><img src="images/18-4.png" alt="images/18-4.png" /></p><p></p><p>We can also create nested directories without parent being existing by using -p flag with mkdir command. It will create missing parent directories.</p><p><img src="images/18-5.png" alt="images/18-5.png" /></p></div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Linux File Permissions</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Linux File Permissions</h1><br/><p>Linux File Permissions determine who can read, write and execute files in a linux system. </p><p></p><p>It ensures that only authorized users or processes can access the file. It is a very importan feature from information security pov.</p><p></p><p>There is always a user and a group is assigned with the file. The owner of that file the one who created that file and primary group of that user becomes owner group of that file. These can be changed by using chown and chgrp commands.</p><p></p><p>There are 3 categories of users to whom permissions are assigned : </p><p></p><p>1. The file owner</p><p>2. The group owner</p><p>3. Everyone else(the whole world)</p><p></p><p>There are 3 types of permissions available for a file :</p><p></p><p>1. Read file permission(r)</p><p>2. Write file permission(w)</p><p>3. Execute file permission(x)</p><p></p><p>To get file permissions simply user ls -l.</p><p></p><p><img src="images/36-1.png" alt="images/36-1.png" /></p><p></p><p>In first column of ls output, first character is used to tell type of file and then 9 characters after that are used to show file permissions. </p><p></p><p>9 characters are divided into 3 parts in order of user, group and everyone else.</p><p></p><p>The 3 characters in each user category follow the order read, write and execute. Dash is used where that permission is denied. For example in above image for root file, owner has read and write permissions and group owner and others have only read permission.</p><p></p><p>These permissions are not applicable to root.</p></div>
+</body>
+</html>

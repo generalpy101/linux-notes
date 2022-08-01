@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Scheduling tasks using anacron</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Scheduling tasks using anacron</h1><br/><p>Anacron is used to schedule tasks that run on normal desktops and daily use devices. Cron, if it misses a task if system in down, doesn&#39;t excute it when system is up again but anacron executes the scheduled task on boot if system is down.</p><p></p><p>cron is a daemon but anacron is simple script which can be executed by user on demand and it must be executed to execute scheduled tasks. Infact anacron starts on computer boot.</p><p></p><p>anacrontab file contains anacron job. This file is located in /etc/anacrontab.</p><p></p><p><img src="images/84-1.png" alt="images/84-1.png" /></p><p></p><p>Anacron schedule tasks according to days unlike cron which schedule tasks according to minute.</p><p></p><p>Format of anacron line is :</p><p></p><p><div class="codebox"><pre>day_interval interval identifier <span style="color:#ff9d00;font-weight:700">command</span></pre></div></p><p></p><p>Day interval parameter defines at what intervals of day anacron must run that task. Interval is the time difference at which anacron must run a job.It is according to start of anacron. This is to ensure that system is not overloaded. Identifier is a unique name give to each anacron job. A file with that identifier is stored under /etc/spool/anacron which stores timestamps of when last time that job was exeuted.</p><p></p><p>Let&#39;s schedule a job which runs after 1 minute of start of anacron after every 2 days.</p><p></p><p><div class="codebox"><pre>2 1 print_date <span style="color:#ff9d00;font-weight:700">date</span> &gt;&gt; <span style="color:#ff9d00;font-weight:700">/</span>tmp<span style="color:#ff9d00;font-weight:700">/</span>date.txt</pre></div></p><p><img src="images/84-2.png" alt="images/84-2.png" /></p><p></p><p>To verify the file use if there is no error, output of this command will be empty</p><p><div class="codebox"><pre>anacron -T</pre></div></p><p></p><p>To run anacron task, run anacron command as root. Anacron is usually run in background but we can override this feature by using -d flag.</p><p></p><p><img src="images/84-3.png" alt="images/84-3.png" /></p><p></p><p><img src="images/84-4.png" alt="images/84-4.png" /></p></div>
+</body>
+</html>

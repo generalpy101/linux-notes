@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Linux groups</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Linux groups</h1><br/><p>A group is a collection of users that can be used to provide combined permissions and ownerships.</p><p></p><p>There are 2 types of groups a user can belong to. Primary group which is the group whose id is stored in /etc/passwd. This group usually has same name as user&#39;s and is assigned to user when creating account. Secondary group is the group in which user is added after creation of user account.</p><p></p><p>Each user can only belong to only primary group but n number of secondary groups.</p><p></p><p>/etc/group stores the name of the group mapped to corresponding id.</p><p></p><p>Let&#39;s see group of our current user.</p><p></p><p>We can see that primary group id of user generalpy is 1000 which maps to group named generalpy.</p><p><img src="images/32-1.png" alt="images/32-1.png" /></p><p></p><p>Last field in /etc/group file shows all users which belong to that group, separated by commas.</p><p></p><p>Here we can see all groups to which user generalpy belongs.</p><p><img src="images/32-2.png" alt="images/32-2.png" /></p><p></p><p>There is dedicated groups command to do this group searching stuff.</p><p></p><p>If no argument is provided to groups command, it lists all groups to which current user belongs to and first group is primary group.</p><p><img src="images/32-3.png" alt="images/32-3.png" /></p><p></p><p>To find groups of any user, provide that user&#39;s name to groups command.</p><p></p><p>Another important command to know groups is <strong>id</strong>. It woks same as groups in terms of arguments. </p><p><img src="images/32-4.png" alt="images/32-4.png" /></p><p></p><p>Id shows userid group id and groups of user(current user in this case).</p></div>
+</body>
+</html>

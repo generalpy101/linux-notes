@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Understanding sticky bit</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Understanding sticky bit</h1><br/><p>The last special permission is sticky bit and it is applied to the directories.</p><p></p><p>Generally in linux, other users can delete your files from a directory if they have write permissions for that directory.</p><p></p><p><img src="images/43-1.png" alt="images/43-1.png" /></p><p></p><p>james can delete file inspite of being not privileged enough to do that just because he has rwx access to parent directory.</p><p></p><p>To stop this, sticky bit is used.</p><p></p><p>There are 2 ways to set sticky bit  :</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">chmod</span> o+t <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">chmod</span> 1xxx <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p></p><p><img src="images/43-2.png" alt="images/43-2.png" /></p><p></p><p>We changed the sticky bit for directory and now other users cannot delete the files .</p></div>
+</body>
+</html>

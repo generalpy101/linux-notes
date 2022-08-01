@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Removing file and dirs</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Removing file and dirs</h1><br/><p><strong>rm</strong> command is used to remove files and directories in Linux.</p><p></p><p>To remove files using rm we just have to provide name(s) of the files.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">rm</span> file1 file2.....filen</pre></div></p><p><img src="images/21-1.png" alt="images/21-1.png" /></p><p></p><p>We can use -i flag to get an interactive prompt when deleting a file or dir.</p><p></p><p><img src="images/21-2.png" alt="images/21-2.png" /></p><p></p><p>We can use -v flag for verbose.</p><p></p><p>To remove a directory we have to use -r flag which stands for recursive as when removing a directory we also have to delete contents inside it.</p><p></p><p><img src="images/21-3.png" alt="images/21-3.png" /></p><p></p><p>When removing a write protected item, rm prompts if you want to continue. We can use -f flag which stands for force to remove that behaviour.</p><p></p><p>In below arrangement we can delete files of user root because they are in home dir of generalpy.</p><p>Here we can see use of -f flag.</p><p><img src="images/21-4.png" alt="images/21-4.png" /></p><p></p><p>Since there is no concept of a recycle bin, care must be taken when removing files using rm command. Use tab for autocompletion and check output of wildcard commands before executing.</p><p></p><p>Files deleted can be recovered by some specialised methods(different from recycle bin) so your data can be retrieved and can be used for malicious purposes. So to prevent this we can use shredding utility which adds random bunch of garbage multiple times in your file so that its contents become unreadable.</p><p>Shredding can be done on linux by using shred command.</p><p></p><p><div class="codebox"><pre>shred -uv -n &lt;number&gt; &lt;<span style="color:#ff9d00;font-weight:700">file</span>&gt;</pre></div></p><p></p><p>-v stands for verbose , -u is used to delete original after shredding and -n specifies number of times a file must be shredded(3 by default)</p><p><img src="images/21-5.png" alt="images/21-5.png" /></p></div>
+</body>
+</html>

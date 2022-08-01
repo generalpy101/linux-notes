@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Running scripts</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Running scripts</h1><br/><p>There are multiple ways to run a bash script.</p><p></p><p>Simplest way is the way we&#39;ve been using since since last 2-3 lectures.</p><p></p><p><div class="codebox"><pre>.<span style="color:#ff9d00;font-weight:700">/</span>script_name or absolute_path_to_script</pre></div></p><p></p><p>When running script this way, execute permission should be there and should be appropriate shebang line.</p><p></p><p>Second method to run shell scripts is to actually use the interpreter. Examples :</p><p></p><p><div class="codebox"><pre>python3 python_file<br /><span style="color:#ff9d00;font-weight:700">bash</span> bash_file</pre></div></p><p></p><p>This requires no permissions and ovverides the shebang line.</p><p></p><p>Third way is to use source command or .</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">source</span> <span style="color:#ff9d00;font-weight:700">file</span><br />. <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p></p><p>Both methods are same .</p><p></p><p>The difference between first and third method is that first method runs command inside a new shell or sub shell while third method runs commands in the current shell.</p></div>
+</body>
+</html>

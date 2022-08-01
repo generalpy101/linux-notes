@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Adding scripts to your path</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Adding scripts to your path</h1><br/><p>PATH is a special system variables which tells terminal where to look for executable files when a command is run. PATH is nothing but a list of different paths. </p><p></p><p>When we enter a command, terminal will use PATH variable to determine which directory to search for that command.</p><p></p><p>To print your PATH variable&#39;s value use </p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">echo</span> <span style="color:#3ad900;font-weight:400">&quot;$PATH&quot;</span></pre></div></p><p><img src="images/72-1.png" alt="images/72-1.png" /></p><p></p><p>.profile file is used by the terminal when it loads to load configuration.</p><p></p><p>We can use command :</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">export</span> <span style="color:#7f0044;font-weight:400">PATH</span>=<span style="color:#3ad900;font-weight:400">&quot;$PATH:out_new_path&quot;</span></pre></div></p><p>To add our new path to current path. Here we used $PATH before our new path because if accidentaly we create a script with same name as some system script, the system script will be called first as its source directory will be at left and it will save us from system wide trouble.</p><p></p><p>Using above command will only add path for current session, to preserve path, add above line in .profile file.</p><p></p><p>Original .profile</p><p><img src="images/72-2.png" alt="images/72-2.png" /></p><p></p><p>After changing the .profile file, either restart the terminal or use source command with location of .profile file.</p><p></p><p><img src="images/72-3.png" alt="images/72-3.png" /></p><p></p><p><img src="images/72-4.png" alt="images/72-4.png" /></p><p></p><p>Our script can be executed from anywhere now.</p><p></p><p><table style="display:inline-table"><tr><td><a href="EmbeddedFiles/72-10.1 Bash Script Structure Cheatsheet.pdf">Linked file: 10.1 Bash Script Structure Cheatsheet.pdf </a></td></tr></table></p></div>
+</body>
+</html>

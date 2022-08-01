@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>The effect of permissions on dirs</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>The effect of permissions on dirs</h1><br/><p>Permissions work differently on directories than files.</p><p></p><p>Directories are special kind of files. Let&#39;s see effect of permissions on directories.</p><p></p><p><img src="images/39-1.png" alt="images/39-1.png" /></p><p></p><p>We got permission denied for even some basic directory traversals, but we have read permissions then why?</p><p></p><p>Imagine directory as glass box, you can see its contents but cannot touch them.</p><p></p><p>We should be able to list contents of directories without any error using ls, but why are we getting errors? Because ls is alias for ls --color=auto, now the color flag tries to read a file to determine its type hence simple ls fails.</p><p></p><p>Let&#39;s give write permission to our directory.</p><p></p><p><img src="images/39-2.png" alt="images/39-2.png" /></p><p></p><p>The thing is , for directories, write and read permissions are useless without the execute permission.</p><p></p><p><img src="images/39-3.png" alt="images/39-3.png" /></p><p></p><p>After the execute permission, we can perform all tasks. </p><p></p><p>We can still remove files if files inside dirs have no permissions at all.</p><p><img src="images/39-4.png" alt="images/39-4.png" /></p><p></p><p><h2>Mixture of find and chmod</h2></p><p></p><p>Changing permissions using -R flag can cause problems a lot of times. Imagine a diretory having only read and write permissions, it will be useless.</p><p></p><p>So we can use find command to accomplish this task.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">find</span> [<span style="color:#ff9d00;font-weight:700">find</span> condition] -exec <span style="color:#ff9d00;font-weight:700">chmod</span> permissions <span style="color:#ff9d00;font-weight:700">{}</span> <span style="color:#333333;font-weight:400">\;</span></pre></div></p></div>
+</body>
+</html>

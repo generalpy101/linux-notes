@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Step 1 : Tokenisation</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Step 1 : Tokenisation</h1><br/><p>Step 1 in bash command processing is tokenisation.</p><p></p><p>Tokenisation is to divide command into individual parts known as tokens.</p><p></p><p>Tokens are divided according to metacharacters.</p><p><img src="images/113-1.png" alt="images/113-1.png" /></p><p></p><p>The tokens are then divided into words and operators.</p><p></p><p>Words are the tokens which doesn&#39;t contain any unquoted metacharacters.</p><p></p><p>Operators are the tokens which contain atleast 1 unquoted metachcaracter. Operators are of 2 type :</p><p></p><p>1. <strong>Control Operators</strong> manage the control flow of the script. They are crucial in tokensation as they determine how tokens are divided, where words end etc.</p><p><img src="images/113-2.png" alt="images/113-2.png" /></p><p></p><p>2. <strong>Redirection Operators</strong> provide help in redirection of commands to different streams.</p><p><img src="images/113-3.png" alt="images/113-3.png" /></p><p></p><p>In brief steps of tokenisation are :</p><p></p><p><img src="images/113-4.png" alt="images/113-4.png" /></p><p></p><p>Let&#39;s take example of following command : </p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">echo</span> <span style="color:#7f0044;font-weight:400">$name</span> &gt; a.txt</pre></div></p><p>First metacharacters are identified. In our example unqouted metacharacters are space and &gt; . </p><p></p><p>After that tokens are divided into words and operators. Here words are echo, $name and a.txt and operator is &gt; which is further classified as control or redirection operators.</p><p></p><p><img src="images/113-5.png" alt="images/113-5.png" /></p></div>
+</body>
+</html>

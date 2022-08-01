@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>The readarray command</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>The readarray command</h1><br/><p>readarray command is used to read contents from the stdin and create arrays from it.</p><p></p><p>readarray creates array according to the new line character. Each lines end with new line so each line with the new line character is considered as array element.</p><p></p><p><div class="codebox"><pre>readarray var &lt; anything</pre></div></p><p><img src="images/134-1.png" alt="images/134-1.png" /></p><p>We can see that how each line was converted into array element and we also saw hidden newline character in the elements.</p><p></p><p>We can remove the trailing newline character by using -t option.</p><p><img src="images/134-2.png" alt="images/134-2.png" /></p><p></p><p>We can also use output of other commands to create array but we cannot use pipes for that. When we use pipe, each command is run on its own subshell so the variables will not be visible to our original shell.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">ls</span> <span style="color:#ff9d00;font-weight:700">|</span> readarray files</pre></div></p><p>In above example, files array is only visible to the subshell, which itself gets terminated after the command has exited.</p><p></p><p>To use output of files, we have to use process substitution which is a method which creates temporary files for the process.</p><p></p><p>So the above command will be :</p><p><div class="codebox"><pre>readarray files &lt; &lt;<span style="color:#ff9d00;font-weight:700">(ls)</span></pre></div></p><p><a href="https://superuser.com/questions/1348948/cant-pipe-in-bashs-mapfile-but-why">https://superuser.com/questions/1348948/cant-pipe-in-bashs-mapfile-but-why</a></p></div>
+</body>
+</html>

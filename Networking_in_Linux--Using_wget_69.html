@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Using wget</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Using wget</h1><br/><p>wget is a program which is used to download files from http, https and ftp sites. We can download multiple files, limit bandwidth, pause downloads, mirror sites and can do a lot of things using wget.</p><p></p><p>Simple wget syntax is :</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">wget</span> url</pre></div></p><p><img src="images/69-1.png" alt="images/69-1.png" /></p><p></p><p>The downloaded file will be in current directory.</p><p></p><p>To change download path, use -P option followed by path.</p><p></p><p>To limit download speed, use --limit-rate option followed by speed. By default wget will use maximum bandwidth available.</p><p><img src="images/69-2.png" alt="images/69-2.png" /></p><p>k for kb, m for mb and g for gb.</p><p></p><p>When connection drops in between wget, it will begin downloading from the start. </p><p><img src="images/69-3.png" alt="images/69-3.png" /></p><p></p><p>To pause and resume download we can use -c option.</p><p></p><p><img src="images/69-4.png" alt="images/69-4.png" /></p><p></p><p>We can download multiple files by using -i option and specifying a file which contains all urls from where we need to download.</p><p></p><p>-b option can be added to run wget in background.</p><p></p><p><img src="images/69-5.png" alt="images/69-5.png" /></p><p></p><p>We can use nohup to make wget immune to terminal closing.</p><p></p><p></p><p>To mirror a site : </p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">wget</span> --mirror --convert-links --adjust-extension --page-requisites --no-parent site_url</pre></div></p><p></p><p>Mirror makes download recursive </p><p>convert links will convert links to relative path</p><p>adjust extension will add proper extensions like css , js etc to files </p><p>page requisites will also download all files required to make page visible offline(like external css).</p><p>no parent will restrict site to its current domain i.e if there is a parent domain, eg we are downloading a.apple.com then apple.com will not be downloaded.</p><p></p><p>These options can be shortened to -mkEpnp</p><p>First p is for page requisites and second one is for no parent.</p></div>
+</body>
+</html>

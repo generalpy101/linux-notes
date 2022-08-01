@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Chaining commands</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Chaining commands</h1><br/><p>Command list is when we put one or more commands on a given line.</p><p></p><p>List operators are the control operators which are enable us to create command lists with different behaviours.</p><p></p><p>There are 4 list operators :</p><p></p><p><strong>&amp;</strong> allows us to send command before it to background and create a job from it. It is generally used with time consuming commands. Execution is non sequential.</p><p></p><p><img src="images/124-1.png" alt="images/124-1.png" /></p><p></p><p><strong>;</strong> is used to execute commands sequentially. This command is very useful when we want to execute many commands on single line saving space. </p><p></p><p><div class="codebox"><pre>command1 ; command2 ; ....</pre></div></p><p>Command after ; waits for 1st command to execute hence execution is sequential.</p><p><img src="images/124-2.png" alt="images/124-2.png" /></p><p></p><p><strong>&amp;&amp;</strong> is used to sequentially execute commands according to return code of previously executed commands.</p><p><div class="codebox"><pre>command1 &amp;&amp; command2...</pre></div></p><p>Command 2 will only execute if command1 if executed successfully with 0 exit code.</p><p><img src="images/124-3.png" alt="images/124-3.png" /></p><p></p><p><strong>||</strong> is used to sequentially execute commands according return code of previous command. Second command will only execute if first command fails. Used to create backup command.</p><p><div class="codebox"><pre>command1 || command2...</pre></div></p><p><img src="images/124-4.png" alt="images/124-4.png" /></p></div>
+</body>
+</html>

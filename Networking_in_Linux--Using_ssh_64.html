@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Using ssh</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Using ssh</h1><br/><p>ssh stands for secure shell. It is a program that is used to remotely conenct to system which can help us to use and configure that system.</p><p></p><p><img src="images/64-1.png" alt="images/64-1.png" /></p><p></p><p>We can check status of ssh by using <em>systemctl status ssh</em> on ubuntu.</p><p><img src="images/64-2.png" alt="images/64-2.png" /></p><p></p><p>The ssh requires a ssh server in this case we are using openssh which is a widely used ssh server and openssh client which is also very widely used.</p><p></p><p>Our server in this case is metasploitable machine and client is ubuntu.</p><p></p><p>We will first verify that we can ping our server.</p><p></p><p><img src="images/64-3.png" alt="images/64-3.png" /></p><p><img src="images/64-4.png" alt="images/64-4.png" /></p><p></p><p>Then we will use ssh command, which will invoke our openssh client.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">ssh</span> username@ip<span style="color:#ff9d00;font-weight:700">/</span>domain_of_server</pre></div></p><p>Note that username here must exist in the server machine not on client machine.</p><p></p><p><img src="images/64-5.png" alt="images/64-5.png" /></p><p></p><p>When we connect to a system for first time via ssh, the machine generates a ssh RSA key fingerprint which is a cryptographic key which is required to communicate each time we ssh into the server. The prompt here is to add the RSA key into our local config so that it is known as an identified host. Then we are prompted for password. To exit, type exit or press ctrl+d</p><p></p><p>We can  specify username with -l  flag instead of using @ before host name.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">ssh</span> -l username host_address</pre></div></p><p><img src="images/64-6.png" alt="images/64-6.png" /></p><p></p><p>Sometimes ssh is configured to use a port other than 22. We can used -p option so specify our own port number.</p><p></p><p><img src="images/64-7.png" alt="images/64-7.png" /></p><p></p><p>Different ssh configs are stored in /etc/ssh/ssh_config from where we can change settings like default port number.</p><p></p><p>putty is a windows based windows client.</p></div>
+</body>
+</html>

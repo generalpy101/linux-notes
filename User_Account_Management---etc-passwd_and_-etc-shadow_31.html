@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>/etc/passwd and /etc/shadow</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>/etc/passwd and /etc/shadow</h1><br/><p>There are two files which ply important role in authentication inn Linux. These files are /etc/passwd and /etc/shadow.</p><p></p><p>/etc/passwd contains basic authentication info of the user.</p><p></p><p>The structure of /etc/passwd is :</p><p><img src="images/31-1.png" alt="images/31-1.png" /></p><p></p><p>First column contains name of user. Second column used to store password in unix era but now it stores either x which stands that user has a password which is stored somewhere else(/etc/shadow) or blank which means user has no password. Third and fourth coloumn stores user id and group id. The fifth field is a comment which some times is left blank. The sixth field is user&#39;s home directory and seventh field is the default shell for the user. If default shell is false or nologin, that user is system user or service account and is not allowed to login.</p><p><a href="https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/">/etc/passwd legend</a></p><p></p><p>/etc/shadow is the new file in linux which stores passwords in encrypted form.It can only be readed as root. Its format is :</p><p><img src="images/31-2.png" alt="images/31-2.png" /></p><p>Each fline contains 9 colon separated fields.</p><p>First field contains username, second field contains encrypted password and other 7 fields contain details regarding password expration time like last password change etc. man page of shaadow has full desc of this file.</p><p></p><p>If password field contains * or ! then we are not able to login directly to this account . We can login inderctly by different methods such as su .</p><p></p><p>The format of password field is <strong>$encryption_type$salt$hash</strong>.</p><p>Type can have following values :</p><p><img src="images/31-3.png" alt="images/31-3.png" /></p><p></p><p>A salt combined with text password is used to enforce uniqueness. In other words same password with different salt will give a different hash.</p><p></p></div>
+</body>
+</html>

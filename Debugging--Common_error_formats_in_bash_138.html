@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Common error formats in bash</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Common error formats in bash</h1><br/><p>Basically, shell errors are formatted in the way shown below :</p><p><img src="images/138-1.png" alt="images/138-1.png" /></p><p><div class="codebox"><pre>command<span style="color:#ff9d00;font-weight:700">:</span> text or line where error occured<span style="color:#ff9d00;font-weight:700">:</span> Error description</pre></div></p><p>In our above example, ls is the command, cannot access 1234 is the place where error occured and No such... is error description. This is the preffered way to show errors according to bash convention.</p><p></p><p>Some of the common bash errors are :</p><p></p><p>Syntax errors where something is not written according to bash syntax.</p><p><img src="images/138-2.png" alt="images/138-2.png" /></p><p>Here we can see that error occured in line 5 which is syntax error. We can fix this by correcting the syntax. Shellcheck can also be used.</p><p></p><p>Errors when creating errors are common in bash scripting. Like in our above ls example, we were missing 1234. Since linux doesn&#39;t differentiates between files and dirs very much, error message shows that file or directory is not found. Always check if the path is correctly spelled and exists or is not subjected to any word splitting or globbing.</p><p></p><p>Another common error is when we are trying to create a file or dir and it already exists.</p><p><img src="images/138-3.png" alt="images/138-3.png" /></p><p>Always ensure that directory or file with same name doesn&#39;t exists.</p><p></p><p>File permissions can also cause errors like creating files where we are not allowed to create.</p><p></p><p>Also if commands are not found, it can give errors. Ensure that your script is in path and has appropriate execution permissions.</p></div>
+</body>
+</html>

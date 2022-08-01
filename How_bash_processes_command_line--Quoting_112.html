@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Quoting</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Quoting</h1><br/><p>Commands are just a bunch of character strings.</p><p></p><p>Quoting plays an important role in bash. Quoting is used to remove special meaning from commands.</p><p></p><p>There are 3 types of quoting in bash :</p><p></p><p>1. Using <strong>backslash(\)</strong> removes special meaning from the character immediately followed by it.</p><p>2. Using <strong>single quotes(&#39;&#39;)</strong> removes special meaning from anything enclosed in them.</p><p>3. Using <strong>double quotes(&quot;&quot;)</strong> removes special meaning from anything enclosed in them except $ and ``.</p><p></p><p>Let&#39;s look at an example :</p><p></p><p>We want to store Windows path which contain backslashes which are itself quoting characters.</p><p></p><p>Path is : C:\Users\user1\Desktop and C:\Users\$USER\Desktop(for any user).</p><p></p><p><img src="images/112-1.png" alt="images/112-1.png" /></p><p>We saw that how we can use quotes to manipulate our string. In first case, backslash itself is quoting character hence it was resolved, in this case to nothing as character following it have no special meaning. Then we used single quotes to get our desired outpu tand remove special backslashes. After that we use single quotes on a variable but it was nullified so we used double quotes to get our desired result.</p></div>
+</body>
+</html>

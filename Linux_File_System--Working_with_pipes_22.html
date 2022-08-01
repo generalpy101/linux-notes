@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Working with pipes</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Working with pipes</h1><br/><p>Linux/Unix philosophy is to divide complex tasks into simple modules and do each task separately and link those modules.</p><p></p><p>Piping is a mechanism in Linux that implements that philosophy. By using pipes we can chain multiple commands and can use data from previous command as input for next command.</p><p></p><p><img src="images/22-1.png" alt="images/22-1.png" /></p><p>There are 3 data streams for every linux program or command.</p><p></p><p><strong>Standard Input(STDIN)</strong> : Usually connected from keyboard. This is default input stream.</p><p></p><p><strong>Standard Output(STDOUT)</strong> : Usually connected to monitor. This is default output stream.</p><p></p><p><strong>Standard Error(STDERR)</strong> : This stream is separated from STDOUT just to show errors differently. Contents are shown on monitor.</p><p></p><p><img src="images/22-2.png" alt="images/22-2.png" /></p><p></p><p>Below we used ls command to sort items of /etc dir in size descending. /etc contains a lot of items so we redirected output of ls to head command and use -n flag with argument 20 to get top 20 items from /etc dir sorted by size.</p><p><img src="images/22-3.png" alt="images/22-3.png" /></p><p></p><p>Like this we can chain multiple commands using the pipe operator.</p><p></p><p><strong>wc</strong> command(short for word count) gives word,character and line count of a text. </p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">wc</span> &lt;<span style="color:#ff9d00;font-weight:700">file|</span>text<span style="color:#ff9d00;font-weight:700">|</span>input_from_pipe&gt;</pre></div></p><p></p><p><img src="images/22-4.png" alt="images/22-4.png" /></p><p></p><p>In output of wc, first column is line count, second column is word count and last column is individual character count.</p><p></p><p>We can use different flags to get individual columns like -l for lines only , -w for words only and -c for characters only.</p></div>
+</body>
+</html>

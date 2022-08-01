@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Brace expansion</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Brace expansion</h1><br/><p>Brace expansion can be used to generate text based on a pattern. These come in handy when dealing with text that follow a same pattern.</p><p></p><p>There are 2 types of brace expansions :</p><p></p><p><strong>String expansion</strong> where we expand according to a specific string sequence/ string list. </p><p></p><p><strong>Range expansion</strong> where we expand according to a range/range list like 1 to 10, a to z etc which gives ease of use with limited use power.</p><p></p><p>As name suggest brace expansion uses curly braces.</p><p></p><p>To use string lists, we can write anything between curly braces separated by commas.</p><p></p><p>We cannot have unquoted space in between items and commas.</p><p><img src="images/89-1.png" alt="images/89-1.png" /></p><p></p><p>Now, string list are very flexible when used with different types of data but it becomes troublesome to use string expansion with data with a pattern.</p><p></p><p>Like to generate numbers from 1 to 10 we have to use {1,2,3,4,5,6,7,8,9,10} when using string expansion.</p><p></p><p>We can easily generate related sequences with range expansion. To use a range expansion, put start position and then .. followed by end position.</p><p></p><p>We can also add a 3rd value which can be step and works both on numerical and non numerical types.</p><p></p><p>Range exapsion cannot generate sequences like months. No space is allowed between dots and values. We can also add 0 before start value for numeric types so that values are evenly placed(output will be like 01, 02 ,03 etc).</p><p><img src="images/89-2.png" alt="images/89-2.png" /></p><p></p><p>Lets see an use case of brace expansion. Imagine we are planning to create a journal to log everything that happens in our day. We can easily create directories and files required for that using brace expansion.</p><p><img src="images/89-3.png" alt="images/89-3.png" /></p></div>
+</body>
+</html>

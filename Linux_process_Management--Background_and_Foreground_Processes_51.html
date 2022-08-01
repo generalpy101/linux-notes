@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Background and Foreground Processes</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Background and Foreground Processes</h1><br/><p>There are 2 types of processes :- </p><p> </p><p><strong><span style="text-decoration:underline;">Foreground process</span></strong> : These are the process which run interactively and when started, any other process or command cannot be run in that terminal till the previous process is finished. </p><p></p><p><img src="images/51-1.png" alt="images/51-1.png" /></p><p>Sleep for 15 seconds. Terminal pause for 15 seconds, we cannot do anything.</p><p></p><p>We can provide input to foreground process during runtime.</p><p></p><p><strong><span style="text-decoration:underline;">Background Process</span></strong> : These are non interactive processes which are started by services or by users and we cano run other commands/processes in the same terminal even if a background process is running.</p><p><img src="images/51-2.png" alt="images/51-2.png" /></p><p></p><p>We can append a &amp; at the end of any command to make it background process. </p><p></p><p>Note that even tho process runs in bg, its errors and output is stil shown in the terminal.</p><p></p><p><img src="images/51-3.png" alt="images/51-3.png" /></p><p></p><p>Since command is run in bg and non interactively, we can redirect output and errors into files.</p><p></p><p><img src="images/51-4.png" alt="images/51-4.png" /></p><p></p><p>When output is useless, we can redirect it to /dev/null which is a null device where content is discarded immediately.</p><p><img src="images/51-5.png" alt="images/51-5.png" /></p></div>
+</body>
+</html>

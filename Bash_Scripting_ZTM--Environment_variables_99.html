@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Environment variables</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Environment variables</h1><br/><p><img src="images/99-1.png" alt="images/99-1.png" /></p><p></p><p>There are 2 type of variables available in bash.</p><p></p><p>1. <strong>Environment variables</strong> : These type of variables are defined for current shells and are inherited by all child shells or processes. These are like global variables which are present everywhere. They are displayed using <strong>env</strong> or <strong>printenv</strong>. We can use printenv to display details of individual environment variables.</p><p><img src="images/99-2.png" alt="images/99-2.png" /></p><p>2. Shell variables are like local variables which are only available in current shell where they are defined. They are displayed using set.  </p><p><img src="images/99-3.png" alt="images/99-3.png" /></p><p>Here set is also showing functions too. To remove that behavior, use set in posix mode which can be done by :</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">set</span> -o posix</pre></div></p><p>And then using set.</p><p></p><p>Environment variables are part of shell variables but reverse is not true.</p><p></p><p>To set your own environment variable use export command in ~/.bashrc or profile file .</p><p></p><p><img src="images/99-4.png" alt="images/99-4.png" /></p><p>Here we added scripts directory to PATH variable. This bashrc file is only valid for user generalpy. To make global changes, add export statements in /etc/bash.bashrc or /etc/profile.</p><p></p><p>There is also an file /etc/environment which stores environment variables. It contains name=value pairs only.</p><p></p><p><img src="images/99-5.png" alt="images/99-5.png" /></p></div>
+</body>
+</html>

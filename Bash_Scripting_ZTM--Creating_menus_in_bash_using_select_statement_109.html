@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Creating menus in bash using select statement</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Creating menus in bash using select statement</h1><br/><p>select statement can be used in bash to create a menu.</p><p></p><p>Syntax is :</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">select</span> var <span style="color:#ff9d00;font-weight:700">in</span> list <br /><span style="color:#ff9d00;font-weight:700">do</span><br />    <span style="color:#0088ff;font-weight:400">#commands REPLY variable is created to hold user input</span><br /><span style="color:#ff9d00;font-weight:700">done</span></pre></div></p><p>When using select , a variable REPLY is automatically created to store user&#39;s reply.</p><p></p><p>select displays a menu with its items being items of list and runs an infinite loop until break or ctrl + c are encountered.</p><p></p><p><img src="images/109-1.png" alt="images/109-1.png" /></p><p>Above code shows how we menu is shown and how reply is processed. When empty input is provided, menu is displayed again.</p><p></p><p>Let us add some logic to our code.</p><p></p><p><img src="images/109-2.png" alt="images/109-2.png" /></p><p></p><p>PS3 variable is used to handle the prompt. We can change its value to show a diffrerent prompt from #?.</p></div>
+</body>
+</html>

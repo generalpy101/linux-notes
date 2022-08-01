@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Understanding SGID</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Understanding SGID</h1><br/><p>We saw that we have some special file permissions for files. SGID is also a special file permission that applies to groups.</p><p></p><p>We generally use SGID on directories. </p><p></p><p>When SGID is set for a directory, all contents in that directory have the same group as the parent directory.</p><p></p><p>To set SGID, there are 2 ways :</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">chmod</span> g+s <span style="color:#ff9d00;font-weight:700">file</span></pre></div> </p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">chmod</span> 2xxx <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p></p><p>SGID is usually used to create shared directories.</p><p></p><p><img src="images/42-1.png" alt="images/42-1.png" /></p><p></p><p>Using above commands we created a directory with group as programmers. Now generalpy created a file inside the dir and the directory had group same as generalpy. When james, who is in same programmers group want to edit that file created by generalpy(assume that both work in same office), he cannot do that. We have to set SGID in this case.</p><p></p><p><img src="images/42-2.png" alt="images/42-2.png" /></p><p></p><p>Now we changed user directory to SGID directory. See the difference between fil a and b. Group of file b is programmers inspite of being created by generalpy.</p></div>
+</body>
+</html>

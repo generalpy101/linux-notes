@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Linux file types</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Linux file types</h1><br/><p>In linux everything is like a file. But unlike windows file extensions hold no importance in linux. Extensions are only used for graphical applications and also to ease of access for us humans.</p><p></p><p>file command can be used to determine type of file.</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">file</span> name<span style="color:#ff9d00;font-weight:700">;</span></pre></div></p><p><img src="images/16-1.png" alt="images/16-1.png" /></p><p>In above image we can see that even after changing extension of image from png to jpeg it is still a png image. File type in linux is determined by file headers instead of file extensions.</p><p></p><p><img src="images/16-2.png" alt="images/16-2.png" /></p><p>In image above we ran ls command with -l flag. Here in first column we have some characters(d,r,w,x,- etc.). That column shows type of file and file permissions for user, group and everyone respectively, 3 characters for everyone. There are total 10 characters in first column, first character from which shows file type. In above there is either d or - where d represents directory and - represents regular files. There are other file type specifiers too.</p><p></p><p>Character specifier for different files.</p><p><img src="images/16-3.png" alt="images/16-3.png" /></p><p></p><p>File type explanations.</p><p></p><p><img src="images/16-4.png" alt="images/16-4.png" /></p><p></p><p><a href="https://linuxconfig.org/identifying-file-types-in-linux">More on identifying file types</a></p><p></p><p>-F flag can be used in along with ls to print special symbols along with each file type.</p><p><img src="images/16-5.png" alt="images/16-5.png" /></p><p>Notice different symbols like /,@ etc after file names to show their type.</p><p><img src="images/16-6.png" alt="images/16-6.png" /></p><p><a href="https://unix.stackexchange.com/questions/82357/what-do-the-symbols-displayed-by-ls-f-mean">Symbols meaning</a></p></div>
+</body>
+</html>

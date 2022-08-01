@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>The bash shebang and comments</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>The bash shebang and comments</h1><br/><p>Shebang is a special line at the beginning of any script which is helpful when running that script by its name alone.</p><p></p><p>Shebang instructs the shell to use interpreter specfied in it. Interpreters of different programming lanugages can also be specified.</p><p></p><p>If no shebang line is present, shell will use the defualt interpreter of the user.</p><p></p><p>Syntax of shebang is :</p><p></p><p><div class="codebox"><pre><span style="color:#0088ff;font-weight:400">#!path_to_interpreter</span></pre></div></p><p></p><p>Let&#39;s run a python file without using the python3 command.</p><p><img src="images/96-1.png" alt="images/96-1.png" /></p><p></p><p>We wrote python path in shebang and then executed the file without actually writing the python3 command.</p><p></p><p>It is a good practice to always include shebang line in starting of a bash script. Default bash path is /bin/bash.</p><p></p><p><img src="images/96-2.png" alt="images/96-2.png" /></p><p></p><p>Our script ran as before because bash is defualt interpreter for the system I am using so bash was used as defualt.</p><p></p><p>Comments are pieces of script which are ignored by the interpreter. Anything after the # is a comment in bash except the shebang line. </p><p></p><p>It is advised to use comments to improve readability of the script.</p></div>
+</body>
+</html>

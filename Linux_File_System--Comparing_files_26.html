@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Comparing files</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Comparing files</h1><br/><p>cmp file is used to compare 2 text or binary files. We just have to pass 2 files to it to compare them.</p><p></p><p><img src="images/26-1.png" alt="images/26-1.png" /></p><p>cmp gives where our files differ.</p><p></p><p>If 2 lines are same, cmp will not give any output.</p><p></p><p><img src="images/26-2.png" alt="images/26-2.png" /></p><p></p><p>One more way to compare 2 files is to calculate hashes of the files. We can use sha256sum command to calculate sha256 hash of files.</p><p></p><p><img src="images/26-3.png" alt="images/26-3.png" /></p><p></p><p><strong>diff</strong> command is more helpful when comes to comparing files. It can be used to find differences between 2 files.</p><p></p><p><img src="images/26-4.png" alt="images/26-4.png" /></p><p></p><p><strong>Legend of diff output</strong> :</p><p></p><p><strong>ncm</strong> : This means that line n differs and c means that we have to replace line n in first file with line m to make both files identical. Two more characters a and d are also present which means add and delete line respectively.</p><p><strong>&gt;</strong> : Lines from second file</p><p><strong>&lt;</strong> : Lines from first file</p><p></p><p>There is patch command which  can take output produced by diff file and can apply it to one or more original files. This helps in patch  management.</p><p></p><p>Other useful options are -B which ignores blank spaces, -i to ignore case, -w to ignore whitespaces, -c for more detailed comparison and -y for side by side file comparison.</p></div>
+</body>
+</html>

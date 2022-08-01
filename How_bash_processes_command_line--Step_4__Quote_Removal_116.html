@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Step 4 : Quote Removal</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Step 4 : Quote Removal</h1><br/><p>The shell will remove from the final command any unquoted \, ‘’ and “” that didnot result from a shell expansions.</p><p></p><p>For example :</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">echo</span> <span style="color:#333333;font-weight:400">\$</span>HOME</pre></div></p><p>This will print $HOME on screen, the backslash was a quote and was removed.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">echo</span> <span style="color:#3ad900;font-weight:400">&#39;\$HOME&#39;</span></pre></div></p><p>This will print \$HOME as ‘’  treat everything as a string literal hence single quotes are removed but not inner backslash.</p></div>
+</body>
+</html>

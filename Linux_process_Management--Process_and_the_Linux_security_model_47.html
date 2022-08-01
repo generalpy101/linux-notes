@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Process and the Linux security model</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Process and the Linux security model</h1><br/><p>Running instance of any program is know as a <strong>process</strong> and it runs in its own memory space.</p><p></p><p>Each process is an active entity as opposed to programs which are passive entities.</p><p></p><p>As stated earlier, there are 2 type of commands in linux ,the executable binaries and builtin shell commands. Only executables spawn a process every time they are executed.</p><p></p><p>Each process in Linux has a PID(process ID), user , group and priority. For a binary, until the suid is set, command is run as the current user which may or may not have the root priivileges. This practice makes linux very secure and it is not recommended to run any command with root privileges until it is required.</p><p></p><p>There are different types of processes :</p><p></p><p>Parent</p><p>Child</p><p>Daemon</p><p>Zombie(defunct)</p><p>Orphan</p><p></p><p>When a linux system boots, a process starts which is know as init or systemd. It is the first process in the system and has the PID of 1. All other processes fork from this process making other process its child.</p><p></p><p>A parent process is a special process which invokes multiple processes. The processes invoked by that parent process are known as child process.</p><p></p><p>When a process ends, its resources like memory space are freed automatically but in some cases that cannot be done. These type of process are known as zombie or defunct process.</p><p></p><p>An orphan process is opposite of zombie process. Its a process whose parent process terminated before it. In this case os sends a hangup signal to that process and ultimately terminates it.</p><p></p><p>A daemon process is a special process which runs in background and is run with root privleges to provide some special functionality.</p><p></p><p>Note that task ans process are same terms.</p><p></p><p><a href="https://www.explorelinux.com/different-types-of-processes-in-linux-or-unix/">Types of process</a></p></div>
+</body>
+</html>

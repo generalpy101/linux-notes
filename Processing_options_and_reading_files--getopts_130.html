@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>getopts</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>getopts</h1><br/><p>Getopts command is used to get and parse options in a bash script. Options modify how a bash script works.</p><p></p><p>Syntax :</p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">getopts</span> optstring optionsvar</pre></div></p><p>Optstring is a string containing all options. If an option has argument, then we add : just after the optstring.</p><p></p><p><div class="codebox"><pre><span style="color:#3ad900;font-weight:400">&quot;c:be:&quot;</span></pre></div></p><p>Above is an example of optstring. Here c and e have options.</p><p></p><p>getopts reads a character from the optstring and then sets the variable&#39;s value equal to it. OPTARG stores the value of argument if any. getopts read option from command line(command input by user) and matches it from optstring. If match, then the option is stored in optionsvar else ? is stored in it. It just reads 1 option and then exits. To read multiple options we have to use getopts with a loop.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">ls</span> -l -a</pre></div></p><p>Above is ls written with options. getopts will first read and match -l and then in next loop will read and match -a.</p><p></p><p><img src="images/130-1.png" alt="images/130-1.png" /></p><p></p><p>Above scripts convert celcius to farenheit and vice versa. Our optstring here is “c:f:” and both contains arguments. We store that in opt variable which is conventional name for getopts variable. We used case to match arguments then.</p></div>
+</body>
+</html>

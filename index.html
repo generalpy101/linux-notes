@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Linux and Bash.ctb</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='two-panels'>
+<div class='tree-panel'>
+<div class='tree'>
+<p>
+<strong>Index</strong></br>
+<button onclick='expandAllSubtrees()'>Expand All</button> <button onclick='collapseAllSubtrees()'>Collapse All</button>
+</p>
+<ul class='outermost'>
+<li class='leaf'><a href='#' onclick="changeFrame('intro_to_linux_4.html')">intro to linux</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('linux_terminal_3.html')">linux terminal</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--terminals,_console,_shells_and_commands_5.html')">terminals, console, shells and commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--linux_terminal_command_structure_6.html')">linux terminal command structure</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--getting_help_in_linux_9.html')">getting help in linux</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--tab_key_10.html')">tab key</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--some_useful_keyboard_shortcuts_7.html')">some useful keyboard shortcuts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--bash_history_8.html')">bash history</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('linux_terminal--root_vs_non-privileged_users_11.html')">root vs non-privileged users</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Linux_File_System_12.html')">Linux File System</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Absolute_vs_Relative_file_system_and_Walking_13.html')">Absolute vs Relative file system and Walking</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--ls_in_depth_14.html')">ls in depth</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Linux_timestamps_15.html')">Linux timestamps</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Linux_file_types_16.html')">Linux file types</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Viewing_files_17.html')">Viewing files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Creating_files_and_directories_18.html')">Creating files and directories</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Copying_files_19.html')">Copying files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Move_and_rename_files_20.html')">Move and rename files </a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Removing_file_and_dirs_21.html')">Removing file and dirs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Working_with_pipes_22.html')">Working with pipes</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Command_Redirection_23.html')">Command Redirection</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Finding_files_and_dirs_24.html')">Finding files and dirs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Grep_25.html')">Grep</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Comparing_files_26.html')">Comparing files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--vim_27.html')">vim</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Compressing_and_Archiving_files_28.html')">Compressing and Archiving files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_System--Hardlinks_and_Inode_structures_29.html')">Hardlinks and Inode structures</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('User_Account_Management_30.html')">User Account Management</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('User_Account_Management---etc-passwd_and_-etc-shadow_31.html')">/etc/passwd and /etc/shadow</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('User_Account_Management--Linux_groups_32.html')">Linux groups</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('User_Account_Management--Create,change_and_delete_users_33.html')">Create,change and delete users</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('User_Account_Management--Group_management_34.html')">Group management</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('User_Account_Management--User_account_monitoring_35.html')">User account monitoring</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Linux_File_Permissions_36.html')">Linux File Permissions</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Octal(numeric)_representation_of_file_permissions_37.html')">Octal(numeric) representation of file permissions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Changing_file_permissions_38.html')">Changing file permissions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--The_effect_of_permissions_on_dirs_39.html')">The effect of permissions on dirs</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Changing_file_ownership_40.html')">Changing file ownership</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Understanding_SUID_41.html')">Understanding SUID</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Understanding_SGID_42.html')">Understanding SGID</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Understanding_sticky_bit_43.html')">Understanding sticky bit</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--Umask_44.html')">Umask</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_File_Permissions--File_attributes_45.html')">File attributes</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Linux_process_Management_46.html')">Linux process Management</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Process_and_the_Linux_security_model_47.html')">Process and the Linux security model</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Listing_process_48.html')">Listing process</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Getting_real_time_view_of_system_49.html')">Getting real time view of system</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Signals_and_killing_processes_50.html')">Signals and killing processes</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Background_and_Foreground_Processes_51.html')">Background and Foreground Processes</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Linux_process_Management--Jobs_control_52.html')">Jobs control</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Networking_in_Linux_53.html')">Networking in Linux</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Getting_network_interface_properties_54.html')">Getting network interface properties</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Configure_network_on_the_fly_61.html')">Configure network on the fly</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Setup_static_ip_on_Ubuntu_62.html')">Setup static ip on Ubuntu</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Testing_and_troubleshooting_network_63.html')">Testing and troubleshooting network</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Using_ssh_64.html')">Using ssh</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Troubleshooting_ssh_65.html')">Troubleshooting ssh</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Securing_openssh_server(sshd)_66.html')">Securing openssh server(sshd)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Copying_files_over_network_67.html')">Copying files over network</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Synchronizing_files_and_dirs_using_rsync_68.html')">Synchronizing files and dirs using rsync</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Using_wget_69.html')">Using wget</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Networking_in_Linux--Checking_for_listening_ports_70.html')">Checking for listening ports</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Software_Management_78.html')">Software Management</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Software_Management--DPKG(Ubuntu_and_Debian_based_distros)_79.html')">DPKG(Ubuntu and Debian based distros)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Software_Management--APT_(Advanced_Package_Tool)_80.html')">APT (Advanced Package Tool)</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Software_Management--Compiling_C_programs_81.html')">Compiling C programs</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('System_Administration_82.html')">System Administration</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Task_Automation_and_Scheduling_using_Cron_83.html')">Task Automation and Scheduling using Cron</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Scheduling_tasks_using_anacron_84.html')">Scheduling tasks using anacron</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Mounting_and_unmounting_file_systems_85.html')">Mounting and unmounting file systems</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Working_with_device_files_90.html')">Working with device files</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Getting_system_hardware_info_91.html')">Getting system hardware info</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('System_Administration--Intro_to_systemd_92.html')">Intro to systemd</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Bash_Scripting_ZTM_93.html')">Bash Scripting ZTM</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Bash_Aliases_94.html')">Bash Aliases</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Intro_to_bash_scripting_95.html')">Intro to bash scripting</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--The_bash_shebang_and_comments_96.html')">The bash shebang and comments</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Running_scripts_97.html')">Running scripts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Variables_in_bash_98.html')">Variables in bash</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Environment_variables_99.html')">Environment variables</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Getting_user_input_100.html')">Getting user input</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Special_variables_and_positional_arguments_101.html')">Special variables and positional arguments</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--If_,_elif_and_else_statements_102.html')">If , elif and else statements</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Command_substitution_103.html')">Command substitution</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Comparing_strings_in_if_statments_104.html')">Comparing strings in if statments</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--For_loop_105.html')">For loop</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--While_loop_106.html')">While loop</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Case_statment_107.html')">Case statment</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Functions_108.html')">Functions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Bash_Scripting_ZTM--Creating_menus_in_bash_using_select_statement_109.html')">Creating menus in bash using select statement</a></li>
+</ul>
+<li class='leaf'><a href='#' onclick="changeFrame('-----------------_55.html')">-----------------</a></li>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Intro_to_Bash_Scripting_56.html')">Intro to Bash Scripting</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Shell_vs_Scripts_57.html')">Shell vs Scripts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Core_components_of_a_script_58.html')">Core components of a script</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Bash_script_proffesional_components_59.html')">Bash script proffesional components</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Secure_script_permissions_60.html')">Secure script permissions</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Create_Backup_project_71.html')">Create Backup project</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Intro_to_Bash_Scripting--Adding_scripts_to_your_path_72.html')">Adding scripts to your path</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Variables_and_Shell_expansions_73.html')">Variables and Shell expansions</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--User_defined_variables_and_parameter_expansion_74.html')">User defined variables and parameter expansion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Shell_variables_75.html')">Shell variables</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Parameter_expansion_tricks_77.html')">Parameter expansion tricks</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Command_substitution_86.html')">Command substitution</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Arithmetic_expansion_87.html')">Arithmetic expansion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Tilde_expansion_88.html')">Tilde expansion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Variables_and_Shell_expansions--Brace_expansion_89.html')">Brace expansion</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('How_bash_processes_command_line_110.html')">How bash processes command line</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Overview_111.html')">Overview</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Quoting_112.html')">Quoting</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Step_1__Tokenisation_113.html')">Step 1 : Tokenisation</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Step_2__Command_Identification_114.html')">Step 2 : Command Identification</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Step_3__Expansion_115.html')">Step 3 : Expansion</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Step_4__Quote_Removal_116.html')">Step 4 : Quote Removal</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('How_bash_processes_command_line--Step_5__Redirection_117.html')">Step 5 : Redirection</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Requesting_user_input_118.html')">Requesting user input</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Requesting_user_input--Positional_parameters_119.html')">Positional parameters</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Requesting_user_input--Special_parameters_120.html')">Special parameters</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Requesting_user_input--Read_command_121.html')">Read command</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Requesting_user_input--Select_statement_122.html')">Select statement</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Logic_123.html')">Logic</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Logic--Chaining_commands_124.html')">Chaining commands</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Logic--Test_commands_and_test_operators_125.html')">Test commands and test operators</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Logic--If_statements_126.html')">If statements</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Logic--Case_statement_127.html')">Case statement</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Processing_options_and_reading_files_128.html')">Processing options and reading files</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Processing_options_and_reading_files--While_loop_129.html')">While loop</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Processing_options_and_reading_files--getopts_130.html')">getopts</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Processing_options_and_reading_files--Read_while_for_files_131.html')">Read while for files</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Arrays_and_for_loops_132.html')">Arrays and for loops</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Arrays_and_for_loops--Working_with_indexed_arrays_133.html')">Working with indexed arrays</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Arrays_and_for_loops--The_readarray_command_134.html')">The readarray command</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Arrays_and_for_loops--for_loop_135.html')">for loop</a></li>
+</ul>
+<li><button onclick='toggleSubTree(this)'>-</button> <a href='#' onclick="changeFrame('Debugging_136.html')">Debugging</a></li><ul class='subtree'>
+<li class='leaf'><a href='#' onclick="changeFrame('Debugging--Shellcheck__command_137.html')">Shellcheck  command</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Debugging--Common_error_formats_in_bash_138.html')">Common error formats in bash</a></li>
+<li class='leaf'><a href='#' onclick="changeFrame('Debugging--How_to_get_help_139.html')">How to get help</a></li>
+</ul>
+</ul>
+</div>
+</div>
+<div class='page-panel'><iframe src='' id='page_frame'></iframe></div></div><script src='res/script3.js'></script>
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Octal(numeric) representation of file permissions</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Octal(numeric) representation of file permissions</h1><br/><p>The file permissions can be represented by symbols(character) or in numeric(octal) form.</p><p></p><p>Output of ls -l gave us symbolic representation of file permissions. We can use stat command to get file permissions in octal as well as symbolic format.</p><p><img src="images/37-1.png" alt="images/37-1.png" /></p><p></p><p>The file permissions can be represented in format 0usergroupothers where 0 can be ommited.( 0755 = 755)</p><p></p><p>Now, each permissions is given a specific number, read(r) = 4 , write(w) = 2, execute(x) = 1 and nothing(-) = 0.</p><p></p><p>Total sum of these three permissions is the number for that user category.</p><p></p><p>Lets take above example. There we have symbolic representation as rw-r--r--, so we have numbers 420 400 400 for owner, group, and others. Now for user sum is 6, for group sum is 4 and for others sum is 4. That is what written in output of stat command 0644. We don&#39;t write each number individually like 420400400, we get sum of these numbers and use them to represent file permissions eg 644.</p><p></p><p>All possible file permission numbers.</p><p><img src="images/37-2.png" alt="images/37-2.png" /></p><p></p><p>To give all permissions to everyone, number will be 777.</p></div>
+</body>
+</html>

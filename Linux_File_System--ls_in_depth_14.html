@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>ls in depth</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>ls in depth</h1><br/><p>ls  which is used to list a directory is a very extensive command with many options. Some of the options are listed below.</p><p></p><p><strong>-l</strong> stands for long listing which shows a lot of informations about the directory contents.</p><p></p><p><strong>-a</strong> is used to show all everything present on the given path even if it is a hidden file(beginning with .).</p><p></p><p><strong>-h</strong> is used to show sizes in human readable formats.</p><p></p><p><strong>-S</strong> is used to sort directory contents using according to size descending(larger stuff first).</p><p></p><p><strong>-X</strong> is used to sort contents by extension.</p><p></p><p><strong>--hide</strong> is used to hide certain files in listing.It takes a argument which is the file(s) name to hide.Usually a wildcard file name is used like ls <strong>--hide=*.conf</strong>. </p><p></p><p><strong>-R</strong> lists directories recursively which is the ls walks through all directory tree below the directory passed to ls i.e ls will list contents of subdirectories too.</p><p></p><p><strong>\</strong> removes any aliases. Eg, ls we use on Ubuntu is alias for command <strong>ls --color=auto</strong> which helps to color results of ls appropriately according to item type. To use pure ls use <strong>\ls</strong>.</p><p></p><p>The file size shown in ls for directories is not correct as it is file size of the inode(as directories are also special files). To see true size of a directory use <strong>du(disk usage)</strong> command.</p><p></p><p><img src="images/14-1.png" alt="images/14-1.png" /></p></div>
+</body>
+</html>

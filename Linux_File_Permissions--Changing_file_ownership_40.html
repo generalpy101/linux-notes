@@ -1,0 +1,12 @@
+<!doctype html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Changing file ownership</title>
+  <meta name="generator" content="CherryTree">
+  <link rel="stylesheet" href="res/styles4.css" type="text/css" />
+</head>
+<body>
+<div class='page'><h1 class='title'>Changing file ownership</h1><br/><p>Every file in linux has a user and a group associated with it. By default user is the one who created the file and group is primary group of the creator.</p><p></p><p>We can list file&#39;s user and groups by using ls -l command.</p><p></p><p><img src="images/40-1.png" alt="images/40-1.png" /></p><p></p><p>We can use the chown command to change owner of a file. Chown can only be used by a root user.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">sudo</span> <span style="color:#ff9d00;font-weight:700">chown</span> new_user <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p></p><p><img src="images/40-2.png" alt="images/40-2.png" /></p><p></p><p>We can also use user id instead of username to change the user. Though there are some cases when user name and user id are same. For example there is a user with id 100 and a user named 100. This is a case of ambiguity. In this case user name will be considered. So, to be on safe side, we add a + sign before user id.</p><p></p><p><img src="images/40-3.png" alt="images/40-3.png" /></p><p></p><p>We can also change file group by chown by adding a colon after username(or period in some distros) and then listing the group. We can also omit the user here.</p><p></p><p><div class="codebox"><pre><span style="color:#ff9d00;font-weight:700">sudo</span> <span style="color:#ff9d00;font-weight:700">chown</span> user<span style="color:#ff9d00;font-weight:700">:</span>group[or user.group] <span style="color:#ff9d00;font-weight:700">file</span></pre></div></p><p></p><p><img src="images/40-4.png" alt="images/40-4.png" /></p><p></p><p>There is a dedicated command chgrp to change group of the user.</p><p><img src="images/40-5.png" alt="images/40-5.png" /></p><p></p><p>We can use -R flag for recursive change of users and groups.</p></div>
+</body>
+</html>
